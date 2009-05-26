@@ -254,13 +254,13 @@ function mytheme_iphone_admin() {
   </tr>
   <tr>
     <td width="240"><img src="<?php	echo get_bloginfo('wpurl'); ?>/wp-content/plugins/iphone-control-panel/images/iphone_left.jpg" width="240" height="57" /></td>
-    <td width="57" height="57" background="<?php echo get_bloginfo('wpurl'); ?>/wp-content/plugins/iphone-control-panel/icons/<?php 
+    <td width="57" height="57"><img src="<?php echo get_bloginfo('wpurl'); ?>/wp-content/plugins/iphone-control-panel/icons/<?php 
 	global $options_icp;
 	foreach ($options_icp as $value) {
 	    if (get_settings( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } 
 	      else { $$value['id'] = get_settings( $value['id'] ); } 
 	}
-echo $iphone_control_panel_icon; ?>"><img src="<?php	echo get_bloginfo('wpurl'); ?>/wp-content/plugins/iphone-control-panel/images/button_overlay.png" width="57" height="57" /></td>
+echo $iphone_control_panel_icon; ?>" width="57" height="57" /></td>
     <td width="156"><img src="<?php	echo get_bloginfo('wpurl'); ?>/wp-content/plugins/iphone-control-panel/images/iphone_right.jpg" width="156" height="57" /></td>
   </tr>
   <tr>
