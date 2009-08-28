@@ -2,7 +2,7 @@
 /* 
 Plugin Name: iPhone Control Panel
 Plugin URI: http://www.adrian3.com/
-Version: v0.2
+Version: v0.3
 Author: <a href="http://adrian3.com/">Adrian3</a>
 Description: The iPhone Control Panel plugin makes it easy to customize how iPhone and iPod touch users see your website. You can add a custom icon to the iPhone's home screen, create custom css that affects only iPhones, resize the viewport, or redirect iPhones to a different url.
 
@@ -138,7 +138,7 @@ echo '" type="text/css" rel="stylesheet" />
 		{
 		location.href=\'';
 	echo $iphone_control_panel_redirect;
-	echo '\
+	echo '\'
 		}
 		-->
 	</script>
