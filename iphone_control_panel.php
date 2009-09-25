@@ -2,7 +2,7 @@
 /* 
 Plugin Name: iPhone Control Panel
 Plugin URI: http://www.adrian3.com/
-Version: v0.4
+Version: v0.5
 Author: <a href="http://adrian3.com/">Adrian3</a>
 Description: The iPhone Control Panel plugin makes it easy to customize how iPhone and iPod touch users see your website. You can add a custom icon to the iPhone's home screen, create custom css that affects only iPhones, resize the viewport, or redirect iPhones to a different url.
 
@@ -59,6 +59,13 @@ $options_icp = array (
 		            "id" => $shortname_icp."_viewport",
 		            "std" => "320",
 		            "type" => "text"),
+
+	array(  "name" => "Redirect On/Off*",
+		            "id" => $shortname_icp."_redirect_on_off",
+            		"type" => "select",
+		            "std" => "redirect iphones off",
+		            "options" => array("redirect iphones on -->", 
+					"redirect iphones off")),
 
     array(  "name" => "Redirect*",
             "id" => $shortname_icp."_redirect",
@@ -131,17 +138,19 @@ echo '" type="text/css" rel="stylesheet" />
 	echo $iphone_control_panel_icon;
 	echo '"/>
 
-	<!-- redirect iphones script -->
+	<!-- ';
+	echo $iphone_control_panel_redirect_on_off;
+	echo '
 		<script language=javascript>
-		<!--
 		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)))
 		{
 		location.href=\'';
 	echo $iphone_control_panel_redirect;
 	echo '\'
 		}
+
 	</script>
-		-->	
+	-->		
 	';
 	
 	
@@ -238,6 +247,9 @@ function mytheme_iphone_admin() {
 
 <h4>*Viewport</h4>
 <p>Think of the viewport as the size of the window that is seen on the iPhone's screen. The width of the screen of the touch devices is 320 pixels when held vertically and 480 pixels when held horizontally. The optimum viewport for your site will vary so experiment with it until you get it right.</p>
+
+<h4>*Redirect On/Off</h4>
+<p>Select whether or not you want to redirect iphone/ipod touch users to a different url.</p>
 
 <h4>*Redirect</h4>
 <p>If you would like to redirect iPhone and iPod Touch devices to another url, enter it in this box. Other browsers are not affected by this redirect, just touch devices. This will add a redirect code to every page of your site, so use it carefully. Leave this box blank and no redirect will occur.</p>
