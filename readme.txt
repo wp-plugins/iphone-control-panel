@@ -12,6 +12,10 @@ Configure how iPhones and iPod touches see your site. Add custom css, a home scr
 The iPhone Control Panel Plugin allows you to easily configure how iPhones and iPod touches "see" your site. It gives you the ability to add custom css, a home screen bookmark icon, change the viewport, or even redirect iPhones and iPod touches to a different url.
 
 Changelog
+
+v0.7
+- I tried to fix an error some users experienced on the iPhone Control Panel admin page within Wordpress.
+
 v0.6
 - This plugin has been heavily rebuilt to finally eliminate the redirect issues that plagued the last couple versions.
 - It has been tested to Wordpress 2.85
